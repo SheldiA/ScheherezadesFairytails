@@ -17,9 +17,9 @@ public class FindBySizeTO extends TO{
         return fairytails;
     }
     
-    public FindBySizeTO(int numCommand,int size){
+    public FindBySizeTO(int numCommand,int size,ArrayList<Fairytail> fairytails){
         super(numCommand);
         this.size = size;
-        fairytails = new ArrayList<Fairytail>();
+        this.fairytails = fairytails;
     }
 }

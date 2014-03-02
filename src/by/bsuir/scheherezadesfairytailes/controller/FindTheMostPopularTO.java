@@ -6,7 +6,7 @@ import by.bsuir.scheherezadesfairytailes.entity.Fairytail;
  *
  * @author Anna
  */
-public class FindByPopularityTO extends TO{
+public class FindTheMostPopularTO extends TO{
     private int popularity;
     private Fairytail resultFairytail;
     public int getPopularity(){
@@ -17,9 +17,9 @@ public class FindByPopularityTO extends TO{
         return resultFairytail;
     }
     
-    public FindByPopularityTO(int numCommand,int popularity){
+    public FindTheMostPopularTO(int numCommand,int popularity,Fairytail fairyTail){
         super(numCommand);
         this.popularity = popularity;
-        resultFairytail = null;
+        resultFairytail = fairyTail;
     }
 }
