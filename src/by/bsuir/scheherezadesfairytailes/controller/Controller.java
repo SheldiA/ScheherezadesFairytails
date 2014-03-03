@@ -3,6 +3,7 @@ package by.bsuir.scheherezadesfairytailes.controller;
 
 import by.bsuir.scheherezadesfairytailes.bl.AddCommand;
 import by.bsuir.scheherezadesfairytailes.bl.Command;
+import by.bsuir.scheherezadesfairytailes.bl.FindBySizeCommand;
 import by.bsuir.scheherezadesfairytailes.bl.FindTheMostPopularCommand;
 import by.bsuir.scheherezadesfairytailes.view.View;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ public class Controller {
         allCommands = new HashMap<Integer,Command>();
         allCommands.put(1,new AddCommand());
         allCommands.put(2, new FindTheMostPopularCommand());
+        allCommands.put(3,new FindBySizeCommand());
         view = v;
     }
     

@@ -12,11 +12,11 @@ public class FindTheMostPopularCommand extends Command{
     @Override
     public TO execute(TO to){
         Fairytail resultFairytail = null;
-        int fairytailsCollectionSize = FairytailesCollection.getFairytails().size();
-        if(fairytailsCollectionSize > 0){
+        int numFairytails = FairytailesCollection.getFairytails().size();
+        if(numFairytails > 0){
             resultFairytail = FairytailesCollection.getFairytails().get(0);
             int maxPopularity = resultFairytail.getPopularity();
-            for(int i = 1; i < fairytailsCollectionSize; ++i){
+            for(int i = 1; i < numFairytails; ++i){
                 int currPopularity = FairytailesCollection.getFairytails().get(i).getPopularity();
                 if(currPopularity > maxPopularity){
                     maxPopularity = currPopularity;
