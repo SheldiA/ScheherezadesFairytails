@@ -1,10 +1,10 @@
 package by.bsuir.scheherezadesfairytailes.view;
 import by.bsuir.scheherezadesfairytailes.controller.AddTO;
-import by.bsuir.scheherezadesfairytailes.controller.Controller;
 import by.bsuir.scheherezadesfairytailes.controller.FindTheMostPopularTO;
 import by.bsuir.scheherezadesfairytailes.controller.TO;
 import by.bsuir.scheherezadesfairytailes.entity.Fairytail;
 import by.bsuir.scheherezadesfairytailes.controller.FindBySizeTO;
+import by.bsuir.scheherezadesfairytailes.controller.ShowAllFairytailesTO;
 import java.util.ArrayList;
 /**
  *
@@ -22,6 +22,7 @@ public class View {
         requests.add(new AddTO(1, new Fairytail("first",100,5), false));
         requests.add(new AddTO(1, new Fairytail("second",200,7), false));
         requests.add(new AddTO(1, new Fairytail("third",150,3), false));
+        requests.add(new ShowAllFairytailesTO(4, null));
         requests.add(new FindTheMostPopularTO(2, null));
         requests.add(new FindBySizeTO(3,300,null));
     }
@@ -45,6 +46,18 @@ public class View {
                     System.out.println(" with popularity " + newFairytail.getPopularity() + " and size " + newFairytail.getSize());
                 }
             }
+        
+        if(to instanceof ShowAllFairytailesTO){
+            ArrayList<Fairytail> allFairytales = ((ShowAllFairytailesTO)to).getFairytailes();
+            if(allFairytales.size() > 0){
+                for(int i = 0; i < allFairytales.size(); ++i){
+                    Fairytail currFairytale = allFairytales.get(i);
+                    System.out.print((i + 1) + ". " + currFairytale.getTitle());
+                    System.out.print(" size " + currFairytale.getSize());
+                    System.out.println(" popularity " + currFairytale.getPopularity());
+                }
+            }
+        }
         
         if(to instanceof FindTheMostPopularTO){
             Fairytail result = ((FindTheMostPopularTO)to).getResultFairytail();

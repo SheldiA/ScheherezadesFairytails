@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/FindBySizeTO.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/FindBySizeCommand.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/view/View.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/Controller.java</file>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/AddCommand.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/FindTheMostPopularTO.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/FindTheMostPopularCommand.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/Main.java</file>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/entity/Fairytail.java</file>
         </group>
     </open-files>
