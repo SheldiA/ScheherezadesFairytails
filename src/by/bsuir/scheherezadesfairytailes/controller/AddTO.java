@@ -13,9 +13,13 @@ public class AddTO extends TO {
         return fairytail;
     }
     
-    public AddTO(int numCommand,Fairytail fairytail){
+    public boolean isResult(){
+        return result;
+    }
+    
+    public AddTO(int numCommand,Fairytail fairytail,boolean result){
         super(numCommand);
         this.fairytail = fairytail;
-        result = false;
+        this.result = result;
     }
 }

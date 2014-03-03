@@ -8,6 +8,7 @@ import by.bsuir.scheherezadesfairytailes.entity.FairytailesCollection;
  * @author Anna
  */
 public class AddCommand extends Command{
+    @Override
     public TO execute(TO to){
         boolean result = false;
         if(to instanceof AddTO)
