@@ -13,6 +13,6 @@ public class AddCommand extends Command{
         boolean result = false;
         if(to instanceof AddTO)
             result = FairytailesCollection.addFairytail(((AddTO)to).getFairytail());
-        return new AddTO(to.getNumCommand(),null, result);
+        return new AddTO(to.getNumCommand(),((AddTO)to).getFairytail(), result);
     }
 }
