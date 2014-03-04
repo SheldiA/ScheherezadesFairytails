@@ -1,5 +1,5 @@
 
-package by.bsuir.scheherezadesfairytailes.controller;
+package by.bsuir.scheherezadesfairytales.controller;
 
 /**
  *

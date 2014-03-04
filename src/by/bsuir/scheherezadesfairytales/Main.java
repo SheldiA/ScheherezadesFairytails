@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package by.bsuir.scheherezadesfairytailes;
+package by.bsuir.scheherezadesfairytales;
 
-import by.bsuir.scheherezadesfairytailes.controller.Controller;
-import by.bsuir.scheherezadesfairytailes.view.View;
+import by.bsuir.scheherezadesfairytales.controller.Controller;
+import by.bsuir.scheherezadesfairytales.view.View;
 
 /**
  *

@@ -1,11 +1,11 @@
-package by.bsuir.scheherezadesfairytailes.entity;
+package by.bsuir.scheherezadesfairytales.entity;
 
-public class Fairytail {
+public class Fairytale {
     private final int size;
     private final int popularity;
     private final String title;
     
-    public Fairytail(String title,int size,int popularity){
+    public Fairytale(String title,int size,int popularity){
         this.title = title;
         this.popularity = popularity;
         this.size = size;

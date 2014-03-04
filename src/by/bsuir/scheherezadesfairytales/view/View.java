@@ -1,10 +1,10 @@
-package by.bsuir.scheherezadesfairytailes.view;
-import by.bsuir.scheherezadesfairytailes.controller.AddTO;
-import by.bsuir.scheherezadesfairytailes.controller.FindTheMostPopularTO;
-import by.bsuir.scheherezadesfairytailes.controller.TO;
-import by.bsuir.scheherezadesfairytailes.entity.Fairytail;
-import by.bsuir.scheherezadesfairytailes.controller.FindBySizeTO;
-import by.bsuir.scheherezadesfairytailes.controller.ShowAllFairytailesTO;
+package by.bsuir.scheherezadesfairytales.view;
+import by.bsuir.scheherezadesfairytales.controller.AddTO;
+import by.bsuir.scheherezadesfairytales.controller.FindTheMostPopularTO;
+import by.bsuir.scheherezadesfairytales.controller.TO;
+import by.bsuir.scheherezadesfairytales.entity.Fairytale;
+import by.bsuir.scheherezadesfairytales.controller.FindBySizeTO;
+import by.bsuir.scheherezadesfairytales.controller.ShowAllFairytalesTO;
 import java.util.ArrayList;
 /**
  *
@@ -19,10 +19,10 @@ public class View {
         generateRequests();        
     }
     private void generateRequests(){        
-        requests.add(new AddTO(1, new Fairytail("first",100,5), false));
-        requests.add(new AddTO(1, new Fairytail("second",200,7), false));
-        requests.add(new AddTO(1, new Fairytail("third",150,3), false));
-        requests.add(new ShowAllFairytailesTO(4, null));
+        requests.add(new AddTO(1, new Fairytale("first",400,5), false));
+        requests.add(new AddTO(1, new Fairytale("second",200,7), false));
+        requests.add(new AddTO(1, new Fairytale("third",50,3), false));
+        requests.add(new ShowAllFairytalesTO(4, null));
         requests.add(new FindTheMostPopularTO(2, null));
         requests.add(new FindBySizeTO(3,300,null));
     }
@@ -40,18 +40,18 @@ public class View {
         
         if(to instanceof AddTO)
             if(((AddTO)to).isResult()){
-                Fairytail newFairytail = ((AddTO)to).getFairytail();
-                if(newFairytail != null){
-                    System.out.print("Successfully add fairytail " + newFairytail.getTitle());
-                    System.out.println(" with popularity " + newFairytail.getPopularity() + " and size " + newFairytail.getSize());
+                Fairytale newFairytale = ((AddTO)to).getFairytale();
+                if(newFairytale != null){
+                    System.out.print("Successfully add fairytale " + newFairytale.getTitle());
+                    System.out.println(" with popularity " + newFairytale.getPopularity() + " and size " + newFairytale.getSize());
                 }
             }
         
-        if(to instanceof ShowAllFairytailesTO){
-            ArrayList<Fairytail> allFairytales = ((ShowAllFairytailesTO)to).getFairytailes();
+        if(to instanceof ShowAllFairytalesTO){
+            ArrayList<Fairytale> allFairytales = ((ShowAllFairytalesTO)to).getFairytales();
             if(allFairytales.size() > 0){
                 for(int i = 0; i < allFairytales.size(); ++i){
-                    Fairytail currFairytale = allFairytales.get(i);
+                    Fairytale currFairytale = allFairytales.get(i);
                     System.out.print((i + 1) + ". " + currFairytale.getTitle());
                     System.out.print(" size " + currFairytale.getSize());
                     System.out.println(" popularity " + currFairytale.getPopularity());
@@ -60,13 +60,13 @@ public class View {
         }
         
         if(to instanceof FindTheMostPopularTO){
-            Fairytail result = ((FindTheMostPopularTO)to).getResultFairytail();
+            Fairytale result = ((FindTheMostPopularTO)to).getResultFairytale();
             if(result != null)
-                System.out.println("The most popular fairytail is " + result.getTitle() + " with popularity " + result.getPopularity());
+                System.out.println("The most popular fairytale is " + result.getTitle() + " with popularity " + result.getPopularity());
         }
         
         if(to instanceof FindBySizeTO){
-            ArrayList<Fairytail> result = ((FindBySizeTO)to).getFairytails();
+            ArrayList<Fairytale> result = ((FindBySizeTO)to).getFairytales();
             if(result.size() > 0){
                 System.out.println("for size " + ((FindBySizeTO)to).getSize() + " was found: ");
                 for(int i = 0; i < result.size(); ++i)

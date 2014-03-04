@@ -5,8 +5,10 @@
         <group>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/view/View.java</file>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/Controller.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/AddCommand.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/ShowAllFairytailesCommand.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/entity/FairytailesCollection.java</file>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/Main.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/ShowAllFairytailesTO.java</file>
             <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/entity/Fairytail.java</file>
         </group>
     </open-files>
