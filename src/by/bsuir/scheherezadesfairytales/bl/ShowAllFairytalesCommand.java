@@ -9,6 +9,9 @@ import by.bsuir.scheherezadesfairytales.entity.FairytalesCollection;
  */
 public class ShowAllFairytalesCommand extends Command{
     @Override
+    /**
+     * implement execute method for show all command
+     */
     public TO execute(TO to){
         return new ShowAllFairytalesTO(to.getNumCommand(),FairytalesCollection.getFairytales());
     }

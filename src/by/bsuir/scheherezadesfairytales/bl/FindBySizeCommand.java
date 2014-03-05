@@ -10,6 +10,9 @@ import java.util.ArrayList;
  */
 public class FindBySizeCommand extends Command {
     @Override
+    /**
+     * implement execute method for find by size command
+     */
     public TO execute(TO to){
         ArrayList<Fairytale> resultFairytales = new ArrayList<Fairytale>();
         

@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/view/View.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/Controller.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/bl/ShowAllFairytailesCommand.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/entity/FairytailesCollection.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/Main.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/controller/ShowAllFairytailesTO.java</file>
-            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytailes/src/by/bsuir/scheherezadesfairytailes/entity/Fairytail.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/bl/AddCommand.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/view/View.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/bl/Command.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/view/Const.java</file>
+            <file>file:/D:/MyProjects/Project%20java/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/entity/Fairytale.java</file>
         </group>
     </open-files>
 </project-private>

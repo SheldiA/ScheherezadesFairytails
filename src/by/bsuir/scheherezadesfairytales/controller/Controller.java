@@ -6,6 +6,7 @@ import by.bsuir.scheherezadesfairytales.bl.Command;
 import by.bsuir.scheherezadesfairytales.bl.FindBySizeCommand;
 import by.bsuir.scheherezadesfairytales.bl.FindTheMostPopularCommand;
 import by.bsuir.scheherezadesfairytales.bl.ShowAllFairytalesCommand;
+import by.bsuir.scheherezadesfairytales.Const;
 import by.bsuir.scheherezadesfairytales.view.View;
 import java.util.HashMap;
 
@@ -16,15 +17,23 @@ import java.util.HashMap;
 public class Controller {
     private final HashMap<Integer,Command> allCommands;
     private final View view;
+    
+    /**
+     * 
+     * @param v view for this controller 
+     */
     public Controller(View v){
         allCommands = new HashMap<Integer,Command>();
-        allCommands.put(1,new AddCommand());
-        allCommands.put(2, new FindTheMostPopularCommand());
-        allCommands.put(3,new FindBySizeCommand());
-        allCommands.put(4, new ShowAllFairytalesCommand());
+        allCommands.put(Const.ADD_COMMAND_NUMBER,new AddCommand());
+        allCommands.put(Const.FIND_THE_MOST_POPULAR_COMMAND_NUMBER, new FindTheMostPopularCommand());
+        allCommands.put(Const.FIND_BY_SIZE_COMMAND_NUMBER,new FindBySizeCommand());
+        allCommands.put(Const.SHOW_ALL_COMMAND_NUMBER, new ShowAllFairytalesCommand());
         view = v;
     }
     
+    /**
+     * method for run of this controller
+     */
     public void run(){
         TO to = view.getNextRequest();
         while(to != null){

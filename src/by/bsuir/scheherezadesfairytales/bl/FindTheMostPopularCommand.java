@@ -10,6 +10,9 @@ import by.bsuir.scheherezadesfairytales.entity.FairytalesCollection;
  */
 public class FindTheMostPopularCommand extends Command{
     @Override
+    /**
+     * implement execute method for find the most poplar command
+     */
     public TO execute(TO to){
         Fairytale resultFairytale = null;
         int numFairytails = FairytalesCollection.getFairytales().size();

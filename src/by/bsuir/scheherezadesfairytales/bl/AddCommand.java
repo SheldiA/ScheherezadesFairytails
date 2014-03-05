@@ -8,6 +8,9 @@ import by.bsuir.scheherezadesfairytales.entity.FairytalesCollection;
  */
 public class AddCommand extends Command{
     @Override
+    /**
+     * implement abstract method for add command
+     */
     public TO execute(TO to){
         boolean result = false;
         if(to instanceof AddTO)

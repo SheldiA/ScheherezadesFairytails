@@ -14,6 +14,10 @@ import by.bsuir.scheherezadesfairytales.view.View;
  * @author Anna
  */
 public class Main {
+    /**
+     * 
+     * @param args incoming to program param
+     */
     public static void main(String[] args) {
         View v = new View();
         Controller c = new Controller(v);

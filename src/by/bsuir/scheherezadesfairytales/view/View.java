@@ -5,7 +5,9 @@ import by.bsuir.scheherezadesfairytales.controller.TO;
 import by.bsuir.scheherezadesfairytales.entity.Fairytale;
 import by.bsuir.scheherezadesfairytales.controller.FindBySizeTO;
 import by.bsuir.scheherezadesfairytales.controller.ShowAllFairytalesTO;
+import by.bsuir.scheherezadesfairytales.Const;
 import java.util.ArrayList;
+import java.util.Random;
 /**
  *
  * @author Anna
@@ -18,15 +20,23 @@ public class View {
         requests = new ArrayList<TO>();
         generateRequests();        
     }
-    private void generateRequests(){        
-        requests.add(new AddTO(1, new Fairytale("first",400,5), false));
-        requests.add(new AddTO(1, new Fairytale("second",200,7), false));
-        requests.add(new AddTO(1, new Fairytale("third",50,3), false));
-        requests.add(new ShowAllFairytalesTO(4, null));
-        requests.add(new FindTheMostPopularTO(2, null));
-        requests.add(new FindBySizeTO(3,300,null));
+    
+    /**
+     * hard-coding generator of user requests
+     */
+    private void generateRequests(){  
+        Random random = new Random();
+        for(int i = 0; i < Const.NUMBER_OF_FAIRYTALES_FOR_ADDITION; ++i)
+            requests.add(new AddTO(Const.ADD_COMMAND_NUMBER, new Fairytale("fairytale" + String.valueOf(i + 1),random.nextInt(1000) + 100,random.nextInt(100)), false));
+        requests.add(new ShowAllFairytalesTO(Const.SHOW_ALL_COMMAND_NUMBER, null));
+        requests.add(new FindTheMostPopularTO(Const.FIND_THE_MOST_POPULAR_COMMAND_NUMBER, null));
+        requests.add(new FindBySizeTO(Const.FIND_BY_SIZE_COMMAND_NUMBER,500,null));
     }
     
+    /**
+     * 
+     * @return a param to transfer to controller
+     */
     public TO getNextRequest(){ 
         if(currRequest < requests.size()){
             ++currRequest;
@@ -36,6 +46,10 @@ public class View {
             return null;
     }
     
+    /**
+     * 
+     * @param to a outcoming from controller param which needed to show bu user
+     */
     public void showInfo(TO to){
         
         if(to instanceof AddTO)
