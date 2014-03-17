@@ -4,6 +4,7 @@ import by.bsuir.lw01.controller.TO;
 import by.bsuir.lw01.controller.FindTheMostPopularTO;
 import by.bsuir.lw01.entity.Fairytale;
 import by.bsuir.lw01.entity.FairytalesCollection;
+import java.util.Iterator;
 /**
  *
  * @author Anna
@@ -15,18 +16,22 @@ public class FindTheMostPopularCommand extends Command{
      */
     public TO execute(TO to){
         Fairytale resultFairytale = null;
-        int numFairytails = FairytalesCollection.getInstance().getFairytales().size();
-        if(numFairytails > 0){
-            resultFairytale = FairytalesCollection.getInstance().getFairytales().get(0);
+        Iterator<Fairytale> allFairytales = FairytalesCollection.getInstance().getFairytales();
+        
+        if(allFairytales.hasNext()){
+            
+            resultFairytale = allFairytales.next();
             int maxPopularity = resultFairytale.getPopularity();
-            for(int i = 1; i < numFairytails; ++i){
-                int currPopularity = FairytalesCollection.getInstance().getFairytales().get(i).getPopularity();
-                if(currPopularity > maxPopularity){
-                    maxPopularity = currPopularity;
-                    resultFairytale = FairytalesCollection.getInstance().getFairytales().get(i);
+            
+            while(allFairytales.hasNext()){
+                Fairytale currFairytale = allFairytales.next();
+                if(currFairytale.getPopularity() > maxPopularity){
+                    maxPopularity = currFairytale.getPopularity();
+                    resultFairytale = currFairytale;
                 }
             }
         }
+        
         return new FindTheMostPopularTO(to.getNumCommand(),resultFairytale);
     } 
 }

@@ -7,6 +7,7 @@ import by.bsuir.lw01.controller.FindBySizeTO;
 import by.bsuir.lw01.controller.ShowAllFairytalesTO;
 import by.bsuir.lw01.constant.Const;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 /**
  *
@@ -62,14 +63,14 @@ public class View {
             }
         
         if(to instanceof ShowAllFairytalesTO){
-            ArrayList<Fairytale> allFairytales = ((ShowAllFairytalesTO)to).getFairytales();
-            if(allFairytales.size() > 0){
-                for(int i = 0; i < allFairytales.size(); ++i){
-                    Fairytale currFairytale = allFairytales.get(i);
-                    System.out.print((i + 1) + ". " + currFairytale.getTitle());
-                    System.out.print(" size " + currFairytale.getSize());
-                    System.out.println(" popularity " + currFairytale.getPopularity());
-                }
+            Iterator<Fairytale> allFairytales = ((ShowAllFairytalesTO)to).getFairytales();
+            int count = 1;
+            while(allFairytales.hasNext()){
+                Fairytale currFairytale = allFairytales.next();
+                System.out.print(count + ". " + currFairytale.getTitle());
+                System.out.print(" size " + currFairytale.getSize());
+                System.out.println(" popularity " + currFairytale.getPopularity());
+                ++count;
             }
         }
         
@@ -80,11 +81,11 @@ public class View {
         }
         
         if(to instanceof FindBySizeTO){
-            ArrayList<Fairytale> result = ((FindBySizeTO)to).getFairytales();
-            if(result.size() > 0){
-                System.out.println("for size " + ((FindBySizeTO)to).getSize() + " was found: ");
-                for(int i = 0; i < result.size(); ++i)
-                    System.out.println(result.get(i).getTitle()+ " with size " + result.get(i).getSize());
+            Iterator<Fairytale> result = ((FindBySizeTO)to).getFairytales();
+            System.out.println("for size " + ((FindBySizeTO)to).getSize() + " was found: ");
+            while(result.hasNext()){
+                Fairytale fairytale = result.next();
+                System.out.println(fairytale.getTitle()+ " with size " + fairytale.getSize());
             }
         }
         

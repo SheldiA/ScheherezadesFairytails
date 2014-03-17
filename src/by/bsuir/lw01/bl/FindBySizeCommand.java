@@ -4,6 +4,7 @@ import by.bsuir.lw01.controller.FindBySizeTO;
 import by.bsuir.lw01.entity.Fairytale;
 import by.bsuir.lw01.entity.FairytalesCollection;
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  *
  * @author Anna
@@ -16,18 +17,21 @@ public class FindBySizeCommand extends Command {
     public TO execute(TO to){
         ArrayList<Fairytale> resultFairytales = new ArrayList<Fairytale>();
         
-        int numFairytails = FairytalesCollection.getInstance().getFairytales().size();
-        if(to instanceof FindBySizeTO && numFairytails > 0){
+        if(to instanceof FindBySizeTO){
+            
             int maxSize = ((FindBySizeTO)to).getSize();
-            for(int i = 0; i < numFairytails; ++i){
-                Fairytale currFairytail = FairytalesCollection.getInstance().getFairytales().get(i);
-                if(currFairytail.getSize() <= maxSize){
-                    resultFairytales.add(currFairytail);
-                    maxSize -= currFairytail.getSize();
+            Iterator<Fairytale> fairytalesCollection = FairytalesCollection.getInstance().getFairytales();
+            
+            while(fairytalesCollection.hasNext()){
+                Fairytale currFairytale = fairytalesCollection.next();
+                if(currFairytale.getSize() <= maxSize){
+                    resultFairytales.add(currFairytale);
+                    maxSize -= currFairytale.getSize();
                 }
+                
             }
         }
         
-        return new FindBySizeTO(to.getNumCommand(),((FindBySizeTO)to).getSize(), resultFairytales);
+        return new FindBySizeTO(to.getNumCommand(),((FindBySizeTO)to).getSize(), resultFairytales.iterator());
     }
 }

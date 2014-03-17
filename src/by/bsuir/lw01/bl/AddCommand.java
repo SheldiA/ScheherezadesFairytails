@@ -13,8 +13,10 @@ public class AddCommand extends Command{
      */
     public TO execute(TO to){
         boolean result = false;
+        
         if(to instanceof AddTO)
             result = FairytalesCollection.getInstance().addFairytale(((AddTO)to).getFairytale());
+        
         return new AddTO(to.getNumCommand(),((AddTO)to).getFairytale(), result);
     }
 }

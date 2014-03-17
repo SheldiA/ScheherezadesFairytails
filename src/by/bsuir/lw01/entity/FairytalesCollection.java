@@ -37,8 +37,8 @@ public class FairytalesCollection {
      * 
      * @return fairytales collection
      */
-    public ArrayList<Fairytale> getFairytales(){
-        return fairytailes;
+    public Iterator<Fairytale> getFairytales(){
+        return fairytailes.iterator();
     }
     
     /**

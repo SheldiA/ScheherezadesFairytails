@@ -1,7 +1,7 @@
 package by.bsuir.lw01.controller;
 
 import by.bsuir.lw01.entity.Fairytale;
-import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class FindBySizeTO extends TO{
     private int size;
-    private ArrayList<Fairytale> fairytales;
+    private Iterator<Fairytale> fairytales;
     
     /**
      * 
@@ -23,7 +23,7 @@ public class FindBySizeTO extends TO{
      * 
      * @return a list of fairytales, which sum of size less than param size
      */
-    public ArrayList<Fairytale> getFairytales(){
+    public Iterator<Fairytale> getFairytales(){
         return fairytales;
     }
     
@@ -33,7 +33,7 @@ public class FindBySizeTO extends TO{
      * @param size maximum number of sum of fairytales size
      * @param fairytales list of results fairytales
      */
-    public FindBySizeTO(int numCommand,int size,ArrayList<Fairytale> fairytales){
+    public FindBySizeTO(int numCommand,int size,Iterator<Fairytale> fairytales){
         super(numCommand);
         this.size = size;
         this.fairytales = fairytales;

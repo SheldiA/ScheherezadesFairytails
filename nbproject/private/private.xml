@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/bl/Command.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/bl/AddCommand.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/entity/FairytalesCollection.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/controller/Controller.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/Const.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/bl/FindBySizeCommand.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/Main.java</file>
-            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/scheherezadesfairytales/view/View.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/controller/Controller.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/bl/FindTheMostPopularCommand.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/bl/FindBySizeCommand.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/controller/FindTheMostPopularTO.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/bl/AddCommand.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/controller/AddTO.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/controller/ShowAllFairytalesTO.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/entity/FairytalesCollection.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/controller/FindBySizeTO.java</file>
+            <file>file:/D:/MyProjects/ProjectsJava/ScheherezadesFairytales/src/by/bsuir/lw01/bl/ShowAllFairytalesCommand.java</file>
         </group>
     </open-files>
 </project-private>
